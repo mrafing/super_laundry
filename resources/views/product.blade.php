@@ -78,7 +78,7 @@
                                     <div class="text-center">
                                         <img src="/img/{{ $product->image }}" style = "width:80px ; height:80px"alt="">
                                         <h3 class="font-alt">{{ $product->name }}</h3>
-                                        <p class="text-muted mb-0">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                                        <p class="text-muted mb-0">{{ $product->price}}, {{$product->kg}} KG</p>
                                     </div>
                                 </div>
                                 @endforeach
