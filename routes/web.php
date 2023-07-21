@@ -15,11 +15,13 @@ use App\Http\Controllers\RegisterController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => 'Home',        
+        "active" => 'home'
+    ]);
 });
-Route::get('/product', [ProductController::class, 'index']);
+Route::get('/products', [ProductController::class, 'index']);
 
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
