@@ -2,6 +2,7 @@
 
 @section('container')
     <section>
+        <h2 style="color:#F22DFF;"> Layanan & Harga </h2>
         <div class="container px-5">
             <div class="row justify-content-center">
                 <div class="col">
@@ -21,6 +22,7 @@
                             <div class="col-md-6 mb-5">
                                 <!-- Feature item-->
                                 <div class="text-center">
+
                                     <img src="/img/{{ $product->image }}" style = "width:150px ; height:150px"alt="">
                                     <h3 class="font-alt">{{ $product->name }}</h3>
                                     <p class="text-muted mb-0"> {{$product->kg}} KG</p>
@@ -48,6 +50,8 @@
             </div>
         </div>
     </section>
+
+    <hr size ="10px"/>
  
     <section class="bg-light">
         <div class="container px-5">
@@ -58,7 +62,7 @@
                 </div>
                 <div class="col-sm-8 col-md-6">
                     <div class="px-5 px-sm-0">
-                        <img src="/img/mesincuciproduk1.jpg" alt="..." style = "width :500px ; height: 500px/>
+                        <img src="/img/mesincuciproduk1.jpg" alt="..." style = "width :500px ; height:550px"/>
                     </div>
                 </div>
             </div>
