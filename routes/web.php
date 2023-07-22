@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,12 +15,19 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => 'Home',        
+        "active" => 'home'
+    ]);
 });
+Route::get('/products', [ProductController::class, 'index']);
 
-Route::get('/product', function () {
-    return view('product');
-});
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/register', function () {
+    return view('register');
+})->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);
 
