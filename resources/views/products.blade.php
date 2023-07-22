@@ -21,9 +21,10 @@
                             <div class="col-md-6 mb-5">
                                 <!-- Feature item-->
                                 <div class="text-center">
-                                    <img src="/img/{{ $product->image }}" style = "width:80px ; height:80px"alt="">
+                                    <img src="/img/{{ $product->image }}" style = "width:150px ; height:150px"alt="">
                                     <h3 class="font-alt">{{ $product->name }}</h3>
-                                    <p class="text-muted mb-0">{{ $product->price}}, {{$product->kg}} KG</p>
+                                    <p class="text-muted mb-0"> {{$product->kg}} KG</p>
+                                    <p class="text-muted mb-0">Rp. {{ $product->price}}</p>
                                 </div>
                             </div>
                             @endforeach
@@ -40,22 +41,14 @@
                                     <stop class="gradient-end-color" offset="100%"></stop>
                                 </linearGradient>
                             </defs>
-                            <circle cx="50" cy="50" r="50"></circle></svg><svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
-                            <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
+                            
+                            </svg><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>
                         <div class="device-wrapper">
-                            <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
-                                <div class="screen bg-black">
-                                    <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%"><source src="assets/img/demo-screen.mp4" type="video/mp4" /></video>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <img src="/img/Desain produk.png" style = "width : 350px ; height:450px">
             </div>
         </div>
     </section>
-
+ 
     <section class="bg-light">
         <div class="container px-5">
             <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
