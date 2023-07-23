@@ -20,7 +20,7 @@ use App\Http\Controllers\RegisterController;
 Route::get('/', function () {
     return view('home', [
         "title" => 'Home',        
-        "active" => 'home'
+        "active" => 'home'                          
     ]);
 });
 Route::get('/products', [ProductController::class, 'index']);
