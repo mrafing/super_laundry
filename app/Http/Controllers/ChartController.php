@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Chart;
 use App\Http\Requests\StoreChartRequest;
 use App\Http\Requests\UpdateChartRequest;
+use Illuminate\Http\Request;
+
 
 class ChartController extends Controller
 {
@@ -23,6 +25,15 @@ class ChartController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+
+     public function saveChart(Chart $chart, Request $chartRequest)
+     {
+         $data = $chartRequest->all();
+         //dd($data);
+         $chart->create($data);
+         return redirect('/products')->with('success', 'Berhasil ditambahkan Ke Chart');
+     }
+     
     public function create()
     {
         //

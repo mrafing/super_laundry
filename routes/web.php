@@ -23,15 +23,18 @@ Route::get('/', function () {
         "active" => 'home'                          
     ]);
 });
+
 Route::get('/products', [ProductController::class, 'index']);
+
+Route::post('/cart', [ChartController::class, 'saveChart'])->middleware('auth');
 Route::get('/cart/{id_user:id_user}', [ChartController::class, 'index']);
-// Route::get('cart/{chart:id_user}', [ChartController::class, 'show']);
 
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', function () {
     return view('register');
-})->middleware('guest');
+})->middleware('guest')->name('register');
+
 Route::post('/register', [RegisterController::class, 'store']);
 

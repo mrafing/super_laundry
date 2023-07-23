@@ -2,7 +2,6 @@
 
 @section('container')
     <section>
-        <h2 style="color:#F22DFF;"> Layanan & Harga </h2>
         <div class="container px-5">
             <div class="row justify-content-center">
                 <div class="col">
@@ -14,40 +13,35 @@
                     @endif
                 </div>
             </div>
-            <div class="row gx-5 align-items-center">
-                <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+            <div class="row gx-5 pt-5">
+                <h2 class="text-center mb-5"> LAYANAN & HARGA </h2>
+                <div class="col-lg-6 order-lg-1 mb-5 mb-lg-0">
                     <div class="container-fluid px-5">
                         <div class="row gx-5">
                             @foreach ($products as $product)
-                            <div class="col-md-6 mb-5">
-                                <!-- Feature item-->
-                                <div class="text-center">
+                                <div class="col-md-6 mb-5">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
 
-                                    <img src="/img/{{ $product->image }}" style = "width:200px ; height:200px"alt="">
-                                    <h3 class="font-alt">{{ $product->name }}</h3>
-                                    <p class="text-muted mb-0"> {{$product->kg}} KG</p>
-                                    <p class="text-muted mb-0">Rp. {{ $product->price}}</p>
+                                        <img src="/img/{{ $product->image }}" style = "width:120px ; height:120px"alt="">
+                                        <h3 class="font-alt">{{ $product->name }}</h3>
+                                        <p class="text-muted mb-0"> {{$product->kg}} KG</p>
+                                        <p class="text-muted mb-0 mb-3">Rp. {{ $product->price}}</p>
+                                        <form action="/cart" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id_user" value="@auth {{ Auth::user()->id }} @endauth">
+                                            <input type="hidden" name="id_product" value="{{ $product->id }}">
+                                            <button class="btn bg-gradient-primary-to-secondary text-light text-center rounded-pill mb-2" type="submit"><i class="bi bi-cart3"></i> Add To Cart</button>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
                             @endforeach
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 order-lg-0">
-                    <!-- Features section device mockup-->
-                    <div class="features-device-mockup">
-    
-                            <defs>
-                                <linearGradient id="circleGradient" gradientTransform="rotate(45)">
-                                    <stop class="gradient-start-color" offset="0%"></stop>
-                                    <stop class="gradient-end-color" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            
-                            </svg><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>
-                        <div class="device-wrapper">
-                        <img src="/img/Desain produk.png" style = "width : 350px ; height: 500px">
-                    </div>
+                <div class="col-lg-6 order-lg-0">
+                    <img src="/img/Desain produk.png" style = "width : 350px ; height: 500px">
+                </div>
             </div>
         </div>
     </section>
