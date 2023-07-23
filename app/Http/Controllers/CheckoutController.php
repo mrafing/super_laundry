@@ -3,17 +3,36 @@
 namespace App\Http\Controllers;
 
 use App\Models\Checkout;
+use App\Models\Chart;
 use App\Http\Requests\StoreCheckoutRequest;
 use App\Http\Requests\UpdateCheckoutRequest;
+use Illuminate\Http\Request;
+
+
 
 class CheckoutController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
+    public function index($id_user)
+    {   
+        return view('checkout', [
+            "title" => "Checkout",
+            "active" => "checkout",
+            "checkouts" => Checkout::where('id_user', $id_user)->get()
+        ]);
+
+    }
+    public function saveCheckout(Checkout $checkout, Request $checkoutRequest, $id_user)
+    {   
+        $data = $checkoutRequest->all();
+        $checkout->create($data);
+        return view('checkout', [
+            "title" => "Checkout",
+            "active" => "checkout",
+            "checkouts" => Checkout::where('id_user', $id_user)->get()
+        ])->with('succesCheckout', 'Berhasil Checkout');
     }
 
     /**

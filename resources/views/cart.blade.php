@@ -18,8 +18,9 @@
                     <tbody>
                         @php
                             $no = 1;
+                            $total = 0; // Inisialisasi variabel total
                         @endphp
-                        @foreach ( $carts as $cart )
+                        @foreach ($carts as $cart)
                             <tr>
                                 <td>{{ $no }}</td>
                                 <td>{{ $cart->product->name }}</td>
@@ -28,12 +29,19 @@
                                 <td>1</td>
                             </tr>
                             @php
-                                $no++
+                                $no++;
+                                $total += $cart->product->price; // Menambahkan harga produk ke total
                             @endphp
                         @endforeach
                     </tbody>
+                    
                 </table>
-                <button class="btn bg-gradient-primary-to-secondary text-light text-center rounded-pill btn-lg mb-2" style="width: 100%;" type="submit"><i class="bi bi-cart3"></i> Checkout</button>
+                <form action="/checkout/{{ Auth::user()->id }}" method="post">
+                    @csrf
+                    <input type="hidden" name="total" value="{{ $total }}">
+                    <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
+                    <button class="btn bg-gradient-primary-to-secondary text-light text-center rounded-pill btn-lg mb-2" style="width: 100%;" type="submit"><i class="bi bi-cart3"></i> Checkout</button>
+                </form>
             </div>
         </div>
     </section>
