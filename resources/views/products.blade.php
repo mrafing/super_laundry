@@ -23,7 +23,7 @@
                                 <!-- Feature item-->
                                 <div class="text-center">
 
-                                    <img src="/img/{{ $product->image }}" style = "width:150px ; height:150px"alt="">
+                                    <img src="/img/{{ $product->image }}" style = "width:200px ; height:200px"alt="">
                                     <h3 class="font-alt">{{ $product->name }}</h3>
                                     <p class="text-muted mb-0"> {{$product->kg}} KG</p>
                                     <p class="text-muted mb-0">Rp. {{ $product->price}}</p>
@@ -36,7 +36,7 @@
                 <div class="col-lg-4 order-lg-0">
                     <!-- Features section device mockup-->
                     <div class="features-device-mockup">
-                        <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    
                             <defs>
                                 <linearGradient id="circleGradient" gradientTransform="rotate(45)">
                                     <stop class="gradient-start-color" offset="0%"></stop>
@@ -46,7 +46,7 @@
                             
                             </svg><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>
                         <div class="device-wrapper">
-                        <img src="/img/Desain produk.png" style = "width : 350px ; height:480px">
+                        <img src="/img/Desain produk.png" style = "width : 350px ; height: 500px">
             </div>
         </div>
     </section>
