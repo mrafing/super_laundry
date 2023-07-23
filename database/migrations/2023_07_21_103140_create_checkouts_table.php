@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('id_user');
             $table->foreignId('id_chart');
             $table->integer('total');
+            $table->timestamps();
         });
     }
 
