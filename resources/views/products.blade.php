@@ -2,6 +2,8 @@
 
 @section('container')
     <section>
+        <div class= "container px-4 px-lg-5 text-center">
+        <h2 style="color:#F22DFF;"> Layanan & Harga </h2>
         <div class="container px-5">
             <div class="row justify-content-center">
                 <div class="col">
@@ -39,9 +41,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 order-lg-0">
-                    <img src="/img/Desain produk.png" style = "width : 350px ; height: 500px">
-                </div>
+                <div class="col-lg-4 order-lg-0">
+                    <!-- Features section device mockup-->
+                    <div class="features-device-mockup">
+                            <defs>
+                                <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                                    <stop class="gradient-start-color" offset="0%"></stop>
+                                    <stop class="gradient-end-color" offset="100%"></stop>
+                                </linearGradient>
+                            </defs>
+                            
+                            </svg><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>
+                        <div class="device-wrapper">
+                        <img src="/img/Desain produk.png" style = "width : 350px ; height: 500px">
+                    </div>
             </div>
         </div>
     </section>
