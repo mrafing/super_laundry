@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('checkouts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_user');
-            $table->foreignId('id_chart');
             $table->integer('total');
             $table->timestamps();
         });
