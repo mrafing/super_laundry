@@ -10,4 +10,8 @@ class Product extends Model
     use HasFactory;
     
     protected $guarded = ['id'];
+
+    public function cart () {
+        return $this->hasMany(Chart::class);
+    }
 }

@@ -47,6 +47,7 @@
                             </svg><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>
                         <div class="device-wrapper">
                         <img src="/img/Desain produk.png" style = "width : 350px ; height: 500px">
+                    </div>
             </div>
         </div>
     </section>

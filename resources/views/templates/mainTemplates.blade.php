@@ -37,14 +37,14 @@
                         </li>
                         @auth
                         <li class="nav-item">
-                            <a class="nav-link me-lg-3" href="/"><i class="bi bi-cart3"></i> My Cart</a>
+                            <a class="nav-link me-lg-3" href="/cart/{{ Auth::user()->id }}"><i class="bi bi-cart3"></i> My Cart</a>
                         </li>
                         @endauth
                     </ul>
                     @auth
                     <form action="/logout" method="post">
                         @csrf
-                        <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" type="submit">
+                        <button class="btn bg-gradient-primary-to-secondary text-light rounded-pill px-3 mb-2 mb-lg-0" type="submit">
                             <span class="d-flex align-items-center">
                                 <i class="bi bi-box-arrow-in-left me-2"></i>
                                 <span class="small">Logout</span>
@@ -52,7 +52,7 @@
                         </button>
                     </form>
                     @else
-                    <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <button class="btn bg-gradient-primary-to-secondary text-light rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <span class="d-flex align-items-center">
                             <i class="bi bi-box-arrow-in-right me-2"></i>
                             <span class="small">Login</span>

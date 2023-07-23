@@ -11,9 +11,13 @@ class ChartController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id_user)
     {
-        //
+        return view('cart', [
+            "title" => "Cart",
+            "active" => "cart",
+            "carts" => Chart::where('id_user', $id_user)->get()
+        ]);
     }
 
     /**
@@ -36,8 +40,8 @@ class ChartController extends Controller
      * Display the specified resource.
      */
     public function show(Chart $chart)
-    {
-        //
+    {  
+        // 
     }
 
     /**

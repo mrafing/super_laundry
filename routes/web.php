@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
@@ -22,6 +24,8 @@ Route::get('/', function () {
     ]);
 });
 Route::get('/products', [ProductController::class, 'index']);
+Route::get('/cart/{id_user:id_user}', [ChartController::class, 'index']);
+// Route::get('cart/{chart:id_user}', [ChartController::class, 'show']);
 
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
