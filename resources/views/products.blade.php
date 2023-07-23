@@ -2,6 +2,7 @@
 
 @section('container')
     <section>
+        <div class= "container px-4 px-lg-5 text-center">
         <h2 style="color:#F22DFF;"> Layanan & Harga </h2>
         <div class="container px-5">
             <div class="row justify-content-center">
@@ -36,7 +37,6 @@
                 <div class="col-lg-4 order-lg-0">
                     <!-- Features section device mockup-->
                     <div class="features-device-mockup">
-    
                             <defs>
                                 <linearGradient id="circleGradient" gradientTransform="rotate(45)">
                                     <stop class="gradient-start-color" offset="0%"></stop>
