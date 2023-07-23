@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Chart extends Model
 {
     use HasFactory;
+
+    public function user () {
+        return $this->belongsTo(User::class, 'id_user');
+    }
+
+    public function product () {
+        return $this->belongsTo(Product::class, 'id_product');
+    }
 }
