@@ -9,7 +9,7 @@
                         <!-- Mashead text and app badges-->
                         <div class="mb-5 mb-lg-0 text-center text-lg-start">
                             <h1 class="display-1 lh-1 mb-3">SUPER LAUNDRY</h1>
-                            <p class="lead fw-normal text-bloat mb-5">Butuh tenaga nyuci dan nyetrika tanpa harus membayar pembantu rumah tangga? @Super laundry solusinya.Sewa pembantu rumah tangga terlalu mahal, tapi butuh nyuci dan nyetrika harian, gimana ya solusinya? tenang! Ada @Super Laundry yang bisa jadi sahabat nyuci dan nyetrika harian kamu.</p>
+                            <p class="lead fw-normal text-bloat mb-5">Butuh tenaga nyuci dan nyetrika tanpa harus membayar pembantu rumah tangga? Super laundry solusinya.Sewa pembantu rumah tangga terlalu mahal, tapi butuh nyuci dan nyetrika harian, gimana ya solusinya? tenang! Ada Super Laundry yang bisa jadi sahabat nyuci dan nyetrika harian kamu.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
