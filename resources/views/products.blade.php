@@ -3,8 +3,6 @@
 @section('container')
     <section>
         <div class= "container px-4 px-lg-5 text-center">
-        <h2 style="color:#F22DFF;"> Layanan & Harga </h2>
-        <div class="container px-5">
             <div class="row justify-content-center">
                 <div class="col">
                     @if (session()->has('loginError'))
@@ -15,8 +13,8 @@
                     @endif
                 </div>
             </div>
-            <div class="row gx-5 pt-5">
-                <h2 class="text-center mb-5"> LAYANAN & HARGA </h2>
+            <div class="row gx-5 justify-content-between align-items-center pt-5">
+                <p class="text-center mb-5 fs-2 fw-bold"> LAYANAN & HARGA </p>
                 <div class="col-lg-6 order-lg-1 mb-5 mb-lg-0">
                     <div class="container-fluid px-5">
                         <div class="row gx-5">
@@ -53,13 +51,12 @@
                             
                             </svg><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>
                         <div class="device-wrapper">
-                        <img src="/img/Desain produk.png" style = "width : 350px ; height: 500px">
+                        <img src="/img/Desain produk.png" style = "width : 400px ; height: 530px">
                     </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <hr size ="10px"/>
  
     <section class="bg-light">
         <div class="container px-5">
