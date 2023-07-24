@@ -17,19 +17,24 @@
                     </thead>
                     <tbody>
                         @php
-                            $no = 1;
                             $total = 0; // Inisialisasi variabel total
                         @endphp
                         @foreach ($carts as $cart)
                             <tr>
-                                <td>{{ $no }}</td>
+                                <td>
+                                    <form action="" method="post">
+                                        @csrf
+                                        <button class="btn btn-danger" >
+                                            <i class="bi bi-trash-fill"></i>
+                                        </button>
+                                    </form>
+                                </td>
                                 <td>{{ $cart->product->name }}</td>
                                 <td>{{ $cart->product->kg }}</td>
                                 <td>{{ $cart->product->price }}</td>
                                 <td>1</td>
                             </tr>
                             @php
-                                $no++;
                                 $total += $cart->product->price; // Menambahkan harga produk ke total
                             @endphp
                         @endforeach
