@@ -8,6 +8,10 @@
         <title>{{ $title }}</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
+        <!-- DATATABLES -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css">
+
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
@@ -109,5 +113,13 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <!-- Js-->
         <script src="/js/scripts.js"></script>
+
+        <!-- DATATABLES -->
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+        <script>
+            new DataTable('#table');
+        </script>
     </body>
 </html>

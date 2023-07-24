@@ -9,7 +9,7 @@
                       <b>RIWAYAT CHECKOUT</b>
                     </div>
                     <div class="card-body">
-                        <table class="table">
+                        <table class="table" id="table">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -18,12 +18,18 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @php
+                                $no=1
+                            @endphp
                             @foreach ( $checkouts as $checkout )
                                 <tr>
-                                    <td></td>
+                                    <td>{{ $no }}</td>
                                     <td>{{ $checkout->created_at }}</td>
                                     <td>{{ $checkout->total }}</td>
                                 </tr>
+                                @php
+                                    $no++
+                                @endphp
                             @endforeach
                         </tbody>
                         </table>
@@ -39,3 +45,6 @@
         @endif
     </section>
 @endsection
+<script>
+        new DataTable('#table');
+</script>

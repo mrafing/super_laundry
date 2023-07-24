@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-6">
                 <h2 class="text-center mt-5">My Chart</h2>
-                <table class="table mt-5">
+                <table class="table mt-5" id="table">
                     <thead class="table-primary">
                       <tr>
                         <th>#</th>
