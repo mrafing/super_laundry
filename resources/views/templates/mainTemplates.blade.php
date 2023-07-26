@@ -69,13 +69,20 @@
 
         @yield('container')
 
-        <footer class=" text-center py-1">
-            <div class="container px-5 bg-white text-dark">
-                <div class="text-white-50 small">
-                    <a href="https://www.instagram.com/khorlis_xyz/"><img src="/img/ig.png " style="width:150px; height:130px;" alt=""></a>
-                    <a href="https://www.facebook.com/"><img src="/img/fb.png " style="width:110px; height:90px;" alt=""></a>
-                    
-                    
+        <footer class="py-5 bg-black">
+            <div class="container text-light">
+                <div class="row justify-content-between">
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-auto"><i class="bi bi-geo-alt-fill"></i> Alamat: </div>
+                            <div class="col-auto"><p>JL. Pak Benceng Gg. Morodadi 5 Jalur 1 No.10, PONTIANAK KOTA, KALBAR</p></div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="https://www.instagram.com/khorlis_xyz/"><img src="/img/ig.png " style="width:150px;" alt=""></a>
+                        <a href="https://www.facebook.com/"><img src="/img/fb.png " style="width:110px;" alt=""></a>
+                    </div>
                 </div>
             </div>
         </footer>
