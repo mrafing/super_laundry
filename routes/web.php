@@ -29,6 +29,7 @@ Route::get('/products', [ProductController::class, 'index']);
 
 Route::post('/cart', [ChartController::class, 'saveChart'])->middleware('auth');
 Route::get('/cart/{id_user:id_user}', [ChartController::class, 'index']);
+Route::delete('/cart/hapus/{chart}', [ChartController::class, 'delete']);
 
 Route::get('/checkout/{id_user:id_user}', [CheckoutController::class, 'index'])->middleware('auth');
 Route::post('/checkout/{id_user:id_user}', [CheckoutController::class, 'saveCheckout']);
@@ -41,4 +42,3 @@ Route::get('/register', function () {
 })->middleware('guest')->name('register');
 
 Route::post('/register', [RegisterController::class, 'store']);
-

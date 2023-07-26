@@ -33,6 +33,12 @@ class ChartController extends Controller
          $chart->create($data);
          return redirect('/products')->with('success', 'Berhasil ditambahkan Ke Chart');
      }
+
+     public function delete(Chart $chart)
+     {
+         $chart->delete();
+         return back();
+     }
      
     public function create()
     {

@@ -22,8 +22,9 @@
                         @foreach ($carts as $cart)
                             <tr>
                                 <td>
-                                    <form action="" method="post">
+                                    <form onsubmit="return confirm('Data akan dihapus ?')" action="/cart/hapus/{{ $cart->id }}" method="post">
                                         @csrf
+                                        @method('DELETE')
                                         <button class="btn btn-danger" >
                                             <i class="bi bi-trash-fill"></i>
                                         </button>
