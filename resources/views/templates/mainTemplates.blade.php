@@ -69,11 +69,11 @@
 
         @yield('container')
 
-        <footer class="bg-black text-center py-5">
-            <div class="container px-5">
+        <footer class=" text-center py-1">
+            <div class="container px-5 bg-white text-dark">
                 <div class="text-white-50 small">
-                    <a href="https://www.instagram.com/khorlis_xyz/"><img src="/img/ig.png " style="width:80px; height:60px;" alt=""></a>
-                    <a href="https://www.facebook.com/"><img src="/img/ig.png " style="width:80px; height:60px;" alt=""></a>
+                    <a href="https://www.instagram.com/khorlis_xyz/"><img src="/img/ig.png " style="width:150px; height:130px;" alt=""></a>
+                    <a href="https://www.facebook.com/"><img src="/img/fb.png " style="width:110px; height:90px;" alt=""></a>
                     
                     
                 </div>
