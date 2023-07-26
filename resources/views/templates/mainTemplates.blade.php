@@ -72,12 +72,10 @@
         <footer class="bg-black text-center py-5">
             <div class="container px-5">
                 <div class="text-white-50 small">
-                    <div class="mb-2">&copy; Your Website 2023. All Rights Reserved.</div>
-                    <a href="#!">Privacy</a>
-                    <span class="mx-1">&middot;</span>
-                    <a href="#!">Terms</a>
-                    <span class="mx-1">&middot;</span>
-                    <a href="#!">FAQ</a>
+                    <a href="https://www.instagram.com/khorlis_xyz/"><img src="/img/ig.png " style="width:80px; height:60px;" alt=""></a>
+                    <a href="https://www.facebook.com/"><img src="/img/ig.png " style="width:80px; height:60px;" alt=""></a>
+                    
+                    
                 </div>
             </div>
         </footer>
