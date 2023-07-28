@@ -37,7 +37,7 @@ class ChartController extends Controller
      public function delete(Chart $chart)
      {
          $chart->delete();
-         return back();
+         return back()->with('success', 'Berhasil Di Hapus');
      }
      
     public function create()

@@ -3,6 +3,16 @@
 @section('container')
     <section style="min-height: 100vh">
         <div class="row justify-content-center">
+            <div class="col">
+                @if (session()->has('success'))
+                    <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                        {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+            </div>
+        </div>
+        <div class="row justify-content-center">
             <div class="col-6">
                 <h2 class="text-center mt-5">My Chart</h2>
                 <table class="table mt-5" id="table">
